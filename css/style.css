@@ -1,0 +1,216 @@
+/* =================================
+  Estilos Generales y Fondo
+  =================================
+*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    /* Fondo ajustado y centrado que no se repite */
+    background-image: url('../img/1564434-final.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* =================================
+  Estilos del Título y Sombra
+  =================================
+*/
+.hero-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+
+.main-title {
+    font-size: 3em;
+    color: #007bff;
+    /* Sombra para el título */
+    text-shadow:
+        2px 2px 0 #fff,
+        4px 4px 5px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+}
+
+/* =================================
+  Estilos de la Barra de Navegación (Tipo Link)
+  =================================
+*/
+.top-bar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.nav-item {
+    color: white;
+    padding: 15px 20px;
+    cursor: pointer;
+    text-align: center;
+    flex-grow: 1;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    border-right: 1px solid #444;
+}
+
+/* Eliminar borde derecho del último elemento */
+.nav-item:last-child {
+    border-right: none;
+}
+
+.nav-item:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* =================================
+  Estilos de los 3 Recuadros Horizontales
+  =================================
+*/
+.content-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 0;
+    width: 320px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.card-image-placeholder {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* --- Carga de imágenes por CSS --- */
+#img-aulas {
+    background-image: url('../img/unnamed\ \(1\).jpg');
+}
+
+#img-productos {
+    background-image: url('../img/bano-publico\ \(1\).jpg');
+}
+
+#img-exteriores {
+    background-image: url('../img/unnamed.jpg');
+}
+/* ---------------------------------- */
+
+.card-text {
+    font-weight: bold;
+    color: #007bff;
+    padding: 15px 10px;
+    margin: 0;
+}
+
+/* =================================
+  Estilos del Botón "Entrar"
+  =================================
+*/
+.button-section {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.enter-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.enter-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* =================================
+  🎯 MEDIA QUERIES (Ajustes para Pantallas Móviles) 📱
+  =================================
+*/
+
+/* --- Para Pantallas Pequeñas (ej. hasta 768px) --- */
+@media (max-width: 768px) {
+
+    /* Título más pequeño */
+    .main-title {
+        font-size: 2em;
+        /* Reducimos la sombra también */
+        text-shadow:
+            1px 1px 0 #fff,
+            2px 2px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Barra de Navegación: apilamos los ítems verticalmente */
+    .top-bar {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .nav-item {
+        /* Ocupa todo el ancho */
+        width: 100%;
+        /* El separador horizontal no es necesario */
+        border-right: none;
+        /* Usamos un separador inferior */
+        border-bottom: 1px solid #444;
+        padding: 10px; /* Reducimos el padding */
+    }
+
+    /* Eliminar borde inferior del último elemento */
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    /* Sección de Contenido: apilamos las tarjetas verticalmente */
+    .content-section {
+        flex-direction: column;
+        gap: 20px; /* Espacio entre tarjetas */
+        padding: 0 10px 20px;
+        align-items: center; /* Centramos las tarjetas */
+    }
+
+    .card {
+        /* Ocupa casi todo el ancho para verse mejor, pero con un margen */
+        width: 90%; 
+        max-width: 400px; /* Limite por si la pantalla es muy grande pero aún en vista móvil */
+    }
+
+    .card-image-placeholder {
+        /* Altura de imagen más pequeña si es necesario, 
+        pero 180px está bien para una vista de tarjeta completa */
+        height: 160px;
+    }
+
+    /* Botón más grande para tocar fácilmente */
+    .enter-button {
+        padding: 18px 35px;
+        font-size: 1.3em;
+    }
+}

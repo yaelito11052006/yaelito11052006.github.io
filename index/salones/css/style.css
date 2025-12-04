@@ -1,0 +1,122 @@
+/* Archivo: styles.css */
+
+/* ====================================
+   ESTILOS BASE (Móvil Primero)
+   ==================================== */
+
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center; /* Centra todo el contenido a nivel de bloque */
+    margin: 0; /* Quitamos márgenes para mejor uso del espacio móvil */
+    padding: 0;
+    /* Las URL con '...' son relativas y pueden fallar; usaremos una URL de ejemplo si no se proporciona una ruta absoluta */
+    background: url('../../../img/1564434-final.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    min-height: 100vh;
+    padding: 20px 10px; /* Padding vertical y un poco horizontal para móviles */
+    box-sizing: border-box;
+}
+
+/* Estilo para el título */
+h1 {
+    color: #1a73e8; 
+    font-size: 1.8em; /* Reducido para móvil */
+    margin-bottom: 15px;
+}
+
+/* Contenedor principal para la imagen y el texto */
+.content-container {
+    width: 95%; /* Ocupa casi todo el ancho de la pantalla */
+    max-width: 500px; /* Límite superior para que no sea muy ancho en desktop */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    background-color: #fff;
+    padding: 20px; /* Reducido para móvil */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la imagen centrada */
+.centered-image {
+    display: block; 
+    width: 120px; /* Imagen ligeramente más pequeña en móvil */
+    height: auto;
+    margin: 0 auto 15px auto; 
+    border-radius: 50%; 
+    border: 5px solid #a8dadc;
+}
+
+/* Estilo para el área de texto debajo de la imagen */
+.text-area {
+    text-align: left; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-height: 80px; /* Altura mínima ajustada */
+    margin-bottom: 20px;
+    background-color: #fff7e6; 
+    font-size: 0.95em;
+}
+
+/* Estilo para el botón de regresar */
+.return-button {
+    display: inline-block; 
+    padding: 12px 25px; /* Botón ligeramente más grande para facilitar el toque */
+    font-size: 1em;
+    text-decoration: none; 
+    color: #fff;
+    background-color: #4CAF50; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+
+.return-button:hover {
+    background-color: #45a049;
+    transform: translateY(-1px); /* Efecto sutil al pasar el mouse */
+}
+
+/* ====================================
+   MEDIA QUERIES (Ajustes para Desktop/Tablet grande)
+   ==================================== */
+@media (min-width: 600px) {
+    
+    /* Cuerpo - Quitamos el padding horizontal extra */
+    body {
+        padding: 30px 20px; 
+    }
+
+    /* Título más grande */
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    /* Contenedor principal */
+    .content-container {
+        max-width: 600px; /* Usamos el máximo original */
+        padding: 30px; /* Usamos el padding original */
+    }
+
+    /* Imagen centrada */
+    .centered-image {
+        width: 150px; /* Usamos el tamaño original */
+        margin-bottom: 20px;
+    }
+
+    /* Área de texto */
+    .text-area {
+        min-height: 100px; /* Usamos la altura mínima original */
+        margin-bottom: 30px;
+        font-size: 1em;
+    }
+
+    /* Botón */
+    .return-button {
+        padding: 10px 20px; /* Usamos el padding original */
+        font-size: 1.1em;
+    }
+}
