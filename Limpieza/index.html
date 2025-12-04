@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpieza Escolar</title>
+    <link rel="stylesheet" href="./css/style.css"> 
+</head>
+<body>
+    <header class="hero-section">
+        <h1 class="main-title">Limpieza en tu Escuela</h1>
+    </header>
+
+    <nav class="top-bar">
+        <a href="index.html" class="nav-item">Inicio</a>
+        <a href="https://tesoem.edomex.gob.mx" class="nav-item">Página Escolar</a>
+        <a href="https://wordwall.net/es/resource/103280072" class="nav-item">Actividad</a>
+    </nav>
+
+    <main class="content-section">
+        <div class="card" id="card-1">
+                        <a href="./index/salones/index/index.html" class="image-link">
+                <div class="card-image-placeholder" id="img-aulas"></div> 
+            </a>
+            <p class="card-text">Limpieza de Aulas</p>
+        </div>
+        <div class="card" id="card-2">
+                        <a href="./index/baños/index/index.html" class="image-link">
+                <div class="card-image-placeholder" id="img-productos"></div>
+            </a>
+            <p class="card-text">sanitarios</p>
+        </div>
+        <div class="card" id="card-3">
+                        <a href="./index/patio/index/index.html" class="image-link">
+                <div class="card-image-placeholder" id="img-exteriores"></div>
+            </a>
+            <p class="card-text">Áreas Exteriores</p>
+        </div>
+    </main>
+
+    <section class="button-section">
+        <a href="https://wordwall.net/es/resource/103280072" class="enter-button">ENTRAR</a>
+    </section>
+
+</body>
+</html>
